@@ -1,0 +1,301 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ecf387;
+  background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/ocean-water_LMMFQHNLEX.jpg);
+  margin: 0;
+  padding: 0;
+}
+
+body .hamburger {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 25px;
+}
+
+body .hamburger #menuToggle {
+  display: block;
+  position: relative;
+  max-width: calc(100% - 50px);
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+body .hamburger #menuToggle a:hover {
+  color: white;
+}
+
+body .hamburger #menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #000000;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+body .hamburger #menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+body .hamburger #menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+body .hamburger #menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+body .hamburger #menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+body .hamburger #menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+body .hamburger #menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+body .hamburger #menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffffff;
+}
+
+body .hamburger #menu {
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #000000;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+body .hamburger #menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+header {
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: white;
+  margin: 10px 13rem 0 13rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label-albania, .label-maroko, .label-egipt, .label-turcja {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.label-albania {
+  background-image: url(https://cdn.pixabay.com/photo/2018/09/27/21/37/berat-3707970_960_720.jpg);
+  background-size: cover;
+}
+
+.label-albania label {
+  background-color: rgba(209, 187, 198, 0.74);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.label-maroko {
+  background-image: url(https://cdn.pixabay.com/photo/2017/05/27/22/33/morocco-2349647_960_720.jpg);
+  background-size: cover;
+}
+
+.label-maroko label {
+  background-color: rgba(209, 187, 198, 0.74);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.label-egipt {
+  background-image: url(https://cdn.pixabay.com/photo/2019/06/26/12/25/tomb-4300251_960_720.jpg);
+  background-size: cover;
+}
+
+.label-egipt label {
+  background-color: rgba(209, 187, 198, 0.74);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.label-turcja {
+  background-image: url(https://bi.im-g.pl/im/49/84/bb/z12289097IH,Turcja-wakacje---Blekitny-Meczet--Stambul.jpg);
+  background-size: cover;
+}
+
+.label-turcja label {
+  background-color: rgba(209, 187, 198, 0.74);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container div {
+  border: 1px solid black;
+  min-height: 50px;
+}
+
+.wrapper {
+  border: 2px solid black;
+  border-radius: 20px;
+  min-height: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+  margin: 30px;
+  margin-bottom: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0f1dc), to(#1a5020));
+  background: linear-gradient(#e0f1dc, #1a5020);
+}
+
+.wrapper div {
+  border: 4px solid black;
+  border-radius: 150px;
+  width: 35vw;
+  height: 35vw;
+}
+
+.socialmedia {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20vh;
+  margin-right: 20rem;
+}
+
+.socialmedia a {
+  color: white;
+  margin: 5px 20px 0 0;
+  font-size: 20px;
+}
+
+.socialmedia a:hover {
+  color: #397a30;
+}
+
+footer {
+  padding: 2vh 2vh 2vh 0;
+  color: white;
+  background-color: black;
+  position: fixed;
+  bottom: 0 !important;
+  text-align: right;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 720px) {
+  .wrapper div {
+    width: 60vw;
+    height: 60vw;
+    margin-top: 10vw;
+  }
+  .wrapper {
+    padding-bottom: 5rem;
+  }
+  .socialmedia {
+    margin-right: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

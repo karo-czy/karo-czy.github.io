@@ -1,0 +1,227 @@
+*{box-sizing: border-box;}
+body{
+    background-color: rgb(236, 243, 135);
+    background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/ocean-water_LMMFQHNLEX.jpg);
+    margin: 0;
+    padding: 0;
+    
+    // hamburger made by Erik Terwan 24th of November 2015 MIT License
+
+    .hamburger{
+    position:fixed;
+    left:0;
+    top:0;
+    padding:25px;
+    #menuToggle{
+      display: block;
+      position: relative;
+      // top: 50px;
+      // left:50px;
+      max-width:calc(100% - 50px);
+      // padding-left: 50px;
+      z-index: 1;
+      -webkit-user-select: none;
+      user-select: none;
+      a{
+        &:hover{
+          color: rgb(255, 255, 255);
+        }   
+      }
+      span{
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #000000;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+        opacity 0.55s ease;
+        &:first-child{
+          transform-origin: 0% 0%;
+        }
+        &:nth-last-child(2){
+          transform-origin: 0% 100%;
+        }
+      }
+      input{
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+        -webkit-touch-callout: none; 
+        &:checked ~ ul{transform: none;}
+        &:checked ~ span:nth-last-child(2){
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+        &:checked ~ span:nth-last-child(3){
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        &:checked ~ span {
+          opacity: 1;
+          transform: rotate(45deg) translate(-2px, -1px);
+          background: #ffffff;
+        }
+      }
+    }
+    #menu{
+      position: absolute;
+      width: 300px;
+      height:100vh;
+      margin: -100px 0 0 -50px;
+      padding: 50px;
+      padding-top: 125px;
+      background: #000000;
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      li{
+        padding: 10px 0;
+        font-size: 22px;
+      }
+    }
+  }
+}
+header{
+   background-color: rgb(0, 0, 0);
+   border: 1px solid rgb(255, 255, 255);
+   border-radius: 50px;
+   color: rgb(255, 255, 255);
+   margin: 10px 13rem 0 13rem;
+  
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+   
+.label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-albania, .label-maroko, .label-egipt, .label-turcja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none; 
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.label-albania{
+    background-image: url(https://cdn.pixabay.com/photo/2018/09/27/21/37/berat-3707970_960_720.jpg);
+    background-size: cover;
+    
+    label{
+        background-color: rgba(209, 187, 198, 0.74);
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.label-maroko{
+    background-image: url(https://cdn.pixabay.com/photo/2017/05/27/22/33/morocco-2349647_960_720.jpg);
+    background-size: cover;
+    label{
+        background-color: rgba(209, 187, 198, 0.74);
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.label-egipt{
+    background-image: url(https://cdn.pixabay.com/photo/2019/06/26/12/25/tomb-4300251_960_720.jpg);
+    background-size: cover;
+    label{
+        background-color: rgba(209, 187, 198, 0.74);
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.label-turcja{
+    background-image: url(https://bi.im-g.pl/im/49/84/bb/z12289097IH,Turcja-wakacje---Blekitny-Meczet--Stambul.jpg);
+    background-size: cover;
+    label{
+        background-color: rgba(209, 187, 198, 0.74);
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.container div{
+    border: 1px solid black;
+    min-height: 50px;
+} 
+.wrapper{
+    border: 2px solid black;
+    border-radius: 20px;
+    min-height: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 2rem;
+    margin: 30px;
+    margin-bottom: 80px;
+    background: linear-gradient(#e0f1dc, #1a5020);
+}
+.wrapper div{
+    border: 4px solid black;
+    border-radius: 150px;
+    width: 35vw;
+    height: 35vw;
+}
+.socialmedia{
+    text-decoration: none;
+    display:flex;
+    padding-left: 20vh;
+    margin-right: 20rem;
+    a{
+        color:rgb(255, 255, 255);
+        margin: 5px 20px 0 0;
+        font-size: 20px;
+    }
+    a:hover{
+        color: rgb(57, 122, 48);
+    }
+      
+}
+footer{
+    padding: 2vh 2vh 2vh 0;
+    color: white;
+    background-color: black;
+    position: fixed;
+    bottom: 0 !important;
+    text-align: right;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (max-width:720px){
+    .wrapper div{
+     width: 60vw;
+     height: 60vw;
+     margin-top: 10vw;
+ }
+    .wrapper{
+    padding-bottom: 5rem;
+}
+    .socialmedia{
+     margin-right: 1rem;
+    }
+}
